@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="fotos.css">
+</head>
+<body>
+    <h1>Galeria de Fotos</h1>
+
+    <div id="galeria"></div>
+
+    <script>
+        const galeria = document.getElementById('galeria');
+        const totalFotos = 524; // quantidade total de fotos
+
+        for (let i = 1; i <= totalFotos; i++) {
+            const img = document.createElement('img');
+            img.src = `Fotos_Escola/foto (${i}).jpg`; // 👈 parênteses incluídos
+            img.alt = `Foto ${i}`;
+            img.style.width = '150px';
+            img.style.margin = '5px';
+            galeria.appendChild(img);
+        }
+    </script>
+</body>
+</html>
